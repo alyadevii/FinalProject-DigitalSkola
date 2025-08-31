@@ -3,7 +3,7 @@ from ml_app import run_ml_app
 
 def main():
     st.set_page_config(
-        page_title="Final Project Data Sapiens",
+        page_title="Final Project by Alya Devi Anjani",
         page_icon="💼",
         layout="wide"
     )
@@ -36,7 +36,7 @@ def main():
         st.markdown(
             """
             <div style="max-width: 900px; margin: auto; font-size:18px; line-height:1.6; text-align: justify;">
-                Ini adalah website deploy kelompok 1 (Data Sapiens) untuk mengklasifikasikan pendapatan seseorang ke dalam dua kategori, yaitu pendapatan kurang dari atau sama dengan 50 ribu dolar (<=50K) dan lebih dari 50 ribu dolar (>50K). Prediksi ini didasarkan pada berbagai atribut demografis dan pekerjaan seperti usia, jenis pekerjaan, tingkat pendidikan, status pernikahan, ras, jenis kelamin, jam kerja per minggu, serta informasi finansial seperti keuntungan atau kerugian modal. Dengan menggunakan data tersebut, model dapat membantu memperkirakan tingkat pendapatan seseorang berdasarkan karakteristik individu tersebut.
+                Ini adalah website deploy by Alya Devi Anjani untuk mengklasifikasikan pendapatan seseorang ke dalam dua kategori, yaitu pendapatan kurang dari atau sama dengan 50 ribu dolar (<=50K) dan lebih dari 50 ribu dolar (>50K). Prediksi ini didasarkan pada berbagai atribut demografis dan pekerjaan seperti usia, jenis pekerjaan, tingkat pendidikan, status pernikahan, ras, jenis kelamin, jam kerja per minggu, serta informasi finansial seperti keuntungan atau kerugian modal. Dengan menggunakan data tersebut, model dapat membantu memperkirakan tingkat pendapatan seseorang berdasarkan karakteristik individu tersebut.
             </div>
             """,
             unsafe_allow_html=True
@@ -48,3 +48,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
