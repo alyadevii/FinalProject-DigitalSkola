@@ -2,15 +2,49 @@ import streamlit as st
 from ml_app import run_ml_app
 
 def main():
-    menu = ['Home', 'Machine Learning']
-    choice = st.sidebar.selectbox('Menu', menu) 
+    st.set_page_config(
+        page_title="Final Project Data Sapiens",
+        page_icon="💼",
+        layout="wide"
+    )
+
+    # Sidebar menu dengan judul dan pilihan
+    with st.sidebar:
+        st.title("Menu")
+        menu = ['Home', 'Machine Learning']
+        choice = st.selectbox('', menu)
 
     if choice == 'Home':
-        st.title('Welcome to Final Project Data Sapiens Home Page')
-        st.write('Ini adalah website deploy kelompok 1 (Data Sapiens) untuk mengklasifikasikan pendapatan seseorang ke dalam dua kategori, yaitu pendapatan kurang dari atau sama dengan 50 ribu dolar (<=50K) dan lebih dari 50 ribu dolar (>50K). Prediksi ini didasarkan pada berbagai atribut demografis dan pekerjaan seperti usia, jenis pekerjaan, tingkat pendidikan, status pernikahan, ras, jenis kelamin, jam kerja per minggu, serta informasi finansial seperti keuntungan atau kerugian modal. Dengan menggunakan data tersebut, model dapat membantu memperkirakan tingkat pendapatan seseorang berdasarkan karakteristik individu tersebut.')
-        st.image('https://img.freepik.com/premium-vector/salary-vector-concept-male-worker-female-looking-his-salary-while-standing-with-big-calendar_199064-209.jpg')  # Ganti URL gambar sesuai kebutuhan
+        # Header dengan styling
+        st.markdown(
+            """
+            <h1 style='text-align: center; color: #4B8BBE;'>
+                Welcome to Final Project Data Sapiens
+            </h1>
+            """,
+            unsafe_allow_html=True
+        )
+        
+        # Deskripsi dengan style dan lebar terbatas
+        st.markdown(
+            """
+            <div style="max-width: 900px; margin: auto; font-size:18px; line-height:1.6; text-align: justify;">
+                Ini adalah website deploy kelompok 1 (Data Sapiens) untuk mengklasifikasikan pendapatan seseorang ke dalam dua kategori, yaitu pendapatan kurang dari atau sama dengan 50 ribu dolar (<=50K) dan lebih dari 50 ribu dolar (>50K). Prediksi ini didasarkan pada berbagai atribut demografis dan pekerjaan seperti usia, jenis pekerjaan, tingkat pendidikan, status pernikahan, ras, jenis kelamin, jam kerja per minggu, serta informasi finansial seperti keuntungan atau kerugian modal. Dengan menggunakan data tersebut, model dapat membantu memperkirakan tingkat pendapatan seseorang berdasarkan karakteristik individu tersebut.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        # Gambar tengah dan responsive
+        st.image(
+            'https://img.freepik.com/premium-vector/salary-vector-concept-male-worker-female-looking-his-salary-while-standing-with-big-calendar_199064-209.jpg',
+            use_column_width=True,
+            caption="Prediksi Pendapatan"
+        )
+
     elif choice == 'Machine Learning':
         run_ml_app()
-        
+
+
 if __name__ == '__main__':
     main()
