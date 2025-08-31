@@ -8,14 +8,14 @@ def main():
         layout="wide"
     )
 
-    # Sidebar menu dengan judul dan pilihan
+    # Sidebar menu
     with st.sidebar:
         st.title("Menu")
         menu = ['Home', 'Machine Learning']
         choice = st.selectbox('', menu)
 
     if choice == 'Home':
-        # Header dengan styling
+        # Header
         st.markdown(
             """
             <h1 style='text-align: center; color: #4B8BBE;'>
@@ -24,8 +24,15 @@ def main():
             """,
             unsafe_allow_html=True
         )
-        
-        # Deskripsi dengan style dan lebar terbatas
+
+        # Gambar di bagian atas
+        st.image(
+            'https://img.freepik.com/premium-vector/salary-vector-concept-male-worker-female-looking-his-salary-while-standing-with-big-calendar_199064-209.jpg',
+            use_column_width=True,
+            caption="Prediksi Pendapatan"
+        )
+
+        # Deskripsi
         st.markdown(
             """
             <div style="max-width: 900px; margin: auto; font-size:18px; line-height:1.6; text-align: justify;">
@@ -33,13 +40,6 @@ def main():
             </div>
             """,
             unsafe_allow_html=True
-        )
-
-        # Gambar tengah dan responsive
-        st.image(
-            'https://img.freepik.com/premium-vector/salary-vector-concept-male-worker-female-looking-his-salary-while-standing-with-big-calendar_199064-209.jpg',
-            use_column_width=True,
-            caption="Prediksi Pendapatan"
         )
 
     elif choice == 'Machine Learning':
