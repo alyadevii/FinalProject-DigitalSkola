@@ -19,7 +19,7 @@ def main():
         st.markdown(
             """
             <h1 style='text-align: center; color: #4B8BBE;'>
-                Welcome to Final Project Data Sapiens
+                Welcome to Prediction Employee Income Classification Final Project by Alya Devi Anjani
             </h1>
             """,
             unsafe_allow_html=True
@@ -48,4 +48,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
